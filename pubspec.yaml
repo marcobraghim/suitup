@@ -1,7 +1,7 @@
 name: suitup
 description: A bunch of features and stuff to help me create awesome apps
 version: 1.0.1
-homepage: https://github.com/marcobraghim/suitup
+repository: https://github.com/marcobraghim/suitup
 
 environment:
   sdk: '>=2.19.2 <3.0.0'
