@@ -1,7 +1,7 @@
-import 'package:suitup/src/suitup_color.dart';
-import 'package:suitup/src/suitup_color_abstract.dart';
-import 'package:suitup/src/suitup_text.dart';
-import 'package:suitup/src/suitup_text_abstract.dart';
+import 'suitup_color.dart';
+import 'suitup_color_abstract.dart';
+import 'suitup_text.dart';
+import 'suitup_text_abstract.dart';
 
 class SuitupTheme {
   // ------ SINGLETON ------

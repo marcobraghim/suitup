@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:suitup/src/suitup_theme.dart';
+
+import 'suitup_theme.dart';
 
 class SuitupLoading {
   static initOnMain() => EasyLoading.instance
