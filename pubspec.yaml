@@ -1,6 +1,6 @@
 name: suitup
 description: A bunch of features and stuff to help me create awesome apps
-version: 1.0.1
+version: 1.0.2
 repository: https://github.com/marcobraghim/suitup
 
 environment:
@@ -8,6 +8,7 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
+  brasil_fields: ^1.8.0
   flutter:
     sdk: flutter
   flutter_easyloading: ^3.0.5
