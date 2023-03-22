@@ -20,7 +20,7 @@ void debug(Object? message, {String? label}) {
 
 int randomInt(int start, int end) {
   if (start >= end) {
-    throw "[start] number must be less than [end]";
+    throw "[start] number must to be lower than [end]";
   }
 
   final rnd = Random();

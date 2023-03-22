@@ -54,6 +54,7 @@ extension SuitupStringUtils on String {
     return "${this[0].toUpperCase()}${toLowerCase().substring(1)}";
   }
 
+  /// Attention. It will throw an exception if the email is an empty string.
   bool isValidEmail() {
     final email = trim().toLowerCase();
 
