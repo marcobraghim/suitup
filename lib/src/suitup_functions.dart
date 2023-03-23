@@ -3,6 +3,7 @@ import 'dart:math';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
+import 'package:intl/intl.dart';
 
 /// This functions is supposed to be used when you
 /// want to print something on the debug console,
@@ -16,6 +17,14 @@ void debug(Object? message, {String? label}) {
       sequenceNumber: DateTime.now().millisecondsSinceEpoch,
     );
   }
+}
+
+String dateFormatted(DateTime date, {String? pattern, String? locale}) {
+  var result = DateFormat(pattern ?? 'dd \$1 MMMM \$2 HH:mm', locale ?? 'pt_BR').format(date);
+  if (pattern == null) {
+    result.replaceFirst('\$1', 'de').replaceFirst('\$2', 'às');
+  }
+  return result;
 }
 
 int randomInt(int start, int end) {

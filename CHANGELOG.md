@@ -9,3 +9,9 @@
 ## 1.0.3
 
 * Added SuitupListNotifier
+
+## 1.0.4
+
+* Added SuitupCancellable
+* Added dateFormatted function
+* Removed dependency on `flutter brasil fields`

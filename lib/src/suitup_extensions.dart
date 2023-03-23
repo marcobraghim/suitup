@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:brasil_fields/brasil_fields.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 /// This extension will allow to get the file extension easily
 extension SuitupFileUtils on File {
@@ -65,5 +65,8 @@ extension SuitupStringUtils on String {
 }
 
 extension SuitupDoubleUtils on double {
-  String toMoney() => UtilBrasilFields.obterReal(this);
+  String toMoney({String? locale, String? symbol}) => NumberFormat.currency(
+        locale: locale ?? 'pt_BR',
+        symbol: symbol ?? 'R\$',
+      ).format(this);
 }
