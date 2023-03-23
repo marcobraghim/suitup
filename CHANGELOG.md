@@ -15,3 +15,7 @@
 * Added SuitupCancellable
 * Added dateFormatted function
 * Removed dependency on `flutter brasil fields`
+
+## 1.0.5
+
+* `dateFormatted` bugfix

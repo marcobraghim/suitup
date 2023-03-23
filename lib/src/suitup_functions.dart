@@ -22,7 +22,7 @@ void debug(Object? message, {String? label}) {
 String dateFormatted(DateTime date, {String? pattern, String? locale}) {
   var result = DateFormat(pattern ?? 'dd \$1 MMMM \$2 HH:mm', locale ?? 'pt_BR').format(date);
   if (pattern == null) {
-    result.replaceFirst('\$1', 'de').replaceFirst('\$2', 'às');
+    result = result.replaceFirst('\$1', 'de').replaceFirst('\$2', 'às');
   }
   return result;
 }
