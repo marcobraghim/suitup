@@ -6,8 +6,6 @@ export 'src/suitup_controller.dart';
 export 'src/suitup_extensions.dart';
 export 'src/suitup_functions.dart';
 export 'src/suitup_list_notifier.dart';
-export 'src/suitup_loading_status.dart';
-export 'src/suitup_message.dart';
 export 'src/suitup_observer.dart';
 export 'src/suitup_state.dart';
 export 'src/suitup_status.dart';

@@ -19,3 +19,7 @@
 ## 1.0.5
 
 * `dateFormatted` bugfix
+
+## 1.0.6
+
+* Removed dependency on easy loading
