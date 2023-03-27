@@ -1,4 +1,4 @@
-A bunch of features and stuff to help me create awesome apps
+A bunch of features and stuff to help me create awesome apps.
 
 ## Features
 
