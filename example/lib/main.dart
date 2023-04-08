@@ -57,10 +57,10 @@ class _SuitupObsExampleState extends State<SuitupObsExample> {
   Widget build(BuildContext context) {
     return SuitupNotifierBuilder(
       observable: myName,
-      initial: (data) => const Text('Initializing...'),
-      loading: const CupertinoActivityIndicator(),
-      data: (value) => Text('My name is: $value'),
-      error: (reason) => Text('Something went wrong: $reason'),
+      init: (data) => const Text('Initializing...'),
+      onLoading: const CupertinoActivityIndicator(),
+      onData: (value) => Text('My name is: $value'),
+      onError: (reason) => Text('Something went wrong: $reason'),
     );
   }
 }

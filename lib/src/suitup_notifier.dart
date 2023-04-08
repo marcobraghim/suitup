@@ -87,16 +87,16 @@ class SuitupNotifierBuilder<T extends Object?> extends StatefulWidget {
   final SuitupNotifier<T> observable;
 
   /// Before the [observable] take any kind of modification
-  final Widget Function(T data)? initial;
+  final Widget Function(T data)? init;
 
   /// When the [observable] set the status as `loading`
-  final Widget? loading;
+  final Widget? onLoading;
 
   /// When changes the value of the [observable] and the status is `data`
-  final Widget Function(T value) data;
+  final Widget Function(T value) onData;
 
   /// When there's some error on the [observable]
-  final Widget Function(String reason)? error;
+  final Widget Function(String reason)? onError;
 
   /// With this [Widget] we can observe some value just like [ValueNotifier]
   /// but with some status builders that may help to render on the screen
@@ -107,10 +107,10 @@ class SuitupNotifierBuilder<T extends Object?> extends StatefulWidget {
   const SuitupNotifierBuilder({
     super.key,
     required this.observable,
-    this.initial,
-    this.loading,
-    required this.data,
-    this.error,
+    this.init,
+    this.onLoading,
+    required this.onData,
+    this.onError,
   });
 
   @override
@@ -156,23 +156,22 @@ class _SuitupNotifierBuilderState<T extends Object?>
       // User does not implemented the `initial` method, but there is
       // a value in the `widget.observable.value`, we change the status
       // to data, so the value will be delivered on the `data` method
-      if (widget.initial == null && widget.observable.value != null) {
+      if (widget.init == null && widget.observable.value != null) {
         widget.observable.status = SuitupNotifierType.data;
       } else {
-        return widget.initial?.call(widget.observable.value) ??
-            const SizedBox();
+        return widget.init?.call(widget.observable.value) ?? const SizedBox();
       }
     }
 
     if (widget.observable.status.isData) {
-      return widget.data(widget.observable.value);
+      return widget.onData(widget.observable.value);
     }
 
     if (widget.observable.status.isLoading) {
-      return widget.loading ?? const CupertinoActivityIndicator();
+      return widget.onLoading ?? const CupertinoActivityIndicator();
     }
 
-    return widget.error?.call(widget.observable._errorReason ?? '') ??
+    return widget.onError?.call(widget.observable._errorReason ?? '') ??
         const SizedBox();
   }
 }

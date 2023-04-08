@@ -30,3 +30,6 @@
 
 ## 1.0.8
 * Examples
+
+## 1.0.9
+* `SuitupNotifierBuilder` methods name
