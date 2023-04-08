@@ -27,3 +27,6 @@
 ## 1.0.7
 
 * Added the `SuitupNotifier` that is meant to be used with `SuitupNotifierBuilder`
+
+## 1.0.8
+* Examples
