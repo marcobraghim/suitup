@@ -1,6 +1,6 @@
 name: suitup
 description: A bunch of features and stuff to help me create awesome apps
-version: 1.0.6
+version: 1.0.7
 repository: https://github.com/marcobraghim/suitup
 
 environment:
@@ -8,16 +8,16 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
-  async: ^2.10.0
   flutter:
     sdk: flutter
+  async: ^2.11.0
+  intl: ^0.18.0
   get_it: ^7.2.0
   google_fonts: ^4.0.3
-  intl: ^0.17.0
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
+  # flutter_test:
+  #   sdk: flutter
   flutter_lints: ^2.0.0
 
 # For information on the generic Dart part of this file, see the

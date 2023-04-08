@@ -5,7 +5,7 @@ import 'suitup_theme.dart';
 
 class SuitupTextField extends StatelessWidget {
   final TextEditingController controller;
-  final TextStyle? fieldNameStyle;
+  final Color? disabledColor;
   final String? hintText;
   final TextStyle? hintTextStyle;
   final IconData? leftIcon;
@@ -28,7 +28,7 @@ class SuitupTextField extends StatelessWidget {
   const SuitupTextField({
     Key? key,
     required this.controller,
-    this.fieldNameStyle,
+    this.disabledColor,
     this.hintText,
     this.hintTextStyle,
     this.leftIcon,
@@ -47,95 +47,114 @@ class SuitupTextField extends StatelessWidget {
     this.maxLength,
     this.maxLines = 1,
     this.focusNode,
-  })  : assert(leftIcon == null || leftWidget == null, "Can't have left Icon and left Widget at the same time"),
-        assert(rightIcon == null || rightWidget == null, "Can't have right Icon and right Widget at the same time"),
+  })  : assert(leftIcon == null || leftWidget == null,
+            "Can't have left Icon and left Widget at the same time"),
+        assert(rightIcon == null || rightWidget == null,
+            "Can't have right Icon and right Widget at the same time"),
         super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: padding,
-      child: TextFormField(
-        focusNode: focusNode,
-        keyboardType: keyboardType,
-        controller: controller,
-        textInputAction: textInputAction,
-        obscureText: obscureText,
-        inputFormatters: inputFormatters,
-        onChanged: onChanged,
-        validator: validator,
-        onSaved: onSaved,
-        enabled: enabled,
-        // expands: true,
-        maxLines: maxLines,
-        // minLines: null,
-        maxLength: maxLength,
-        decoration: InputDecoration(
-          contentPadding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-          prefixIcon: leftIcon != null
-              ? Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16),
-                        child: Icon(leftIcon!,
-                            color: enabled ? SuitupTheme.color.primaryLight : SuitupTheme.color.contrast)),
-                    Container(
-                      width: 1,
-                      height: 18,
-                      margin: const EdgeInsets.only(right: 16),
-                      color: SuitupTheme.color.contrast,
-                    ),
-                  ],
-                )
-              : leftWidget,
-          suffixIcon: rightIcon != null
-              ? Padding(
-                  padding: const EdgeInsets.only(right: 16),
-                  child: Icon(rightIcon!, color: SuitupTheme.color.contrast, size: 18))
-              : rightWidget,
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-            borderSide: BorderSide(
-              color: SuitupTheme.color.primary,
-              width: 1,
+      child: Theme(
+        data: ThemeData(
+          disabledColor: disabledColor,
+        ),
+        child: TextFormField(
+          focusNode: focusNode,
+          keyboardType: keyboardType,
+          controller: controller,
+          textInputAction: textInputAction,
+          obscureText: obscureText,
+          inputFormatters: inputFormatters,
+          onChanged: onChanged,
+          validator: validator,
+          onSaved: onSaved,
+          enabled: enabled,
+          // expands: true,
+          maxLines: maxLines,
+          // minLines: null,
+          maxLength: maxLength,
+          decoration: InputDecoration(
+            contentPadding:
+                const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+            // labelStyle: SuitupTheme.text.body1,
+            prefixIcon: leftIcon != null
+                ? Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
+                          child: Icon(leftIcon!,
+                              color: enabled
+                                  ? SuitupTheme.color.primaryLight
+                                  : SuitupTheme.color.contrast)),
+                      Container(
+                        width: 1,
+                        height: 18,
+                        margin: const EdgeInsets.only(right: 16),
+                        color: SuitupTheme.color.contrast,
+                      ),
+                    ],
+                  )
+                : leftWidget,
+            suffixIcon: rightIcon != null
+                ? Padding(
+                    padding: const EdgeInsets.only(right: 16),
+                    child: Icon(rightIcon!,
+                        color: SuitupTheme.color.contrast, size: 18))
+                : rightWidget,
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8),
+              borderSide: BorderSide(
+                color: SuitupTheme.color.primary,
+                width: 1,
+              ),
             ),
-          ),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-            borderSide: BorderSide(
-              color: SuitupTheme.color.primary,
-              width: 1,
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8),
+              borderSide: BorderSide(
+                color: SuitupTheme.color.primary,
+                width: 1,
+              ),
             ),
-          ),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-            borderSide: const BorderSide(
-              color: Color(0xFFE0E4F5),
-              width: 1,
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8),
+              borderSide: BorderSide(
+                color: SuitupTheme.color.border,
+                width: 1,
+              ),
             ),
-          ),
-          hintText: hintText,
-          hintStyle: hintTextStyle,
-          fillColor: SuitupTheme.color.contrastLight,
-          filled: true,
-          errorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-            borderSide: const BorderSide(
-              color: Color(0xFFE0E4F5),
-              width: 1,
+            disabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8),
+              borderSide: BorderSide(
+                color: SuitupTheme.color.border,
+                width: 1,
+              ),
             ),
-          ),
-          focusedErrorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-            borderSide: BorderSide(
-              color: SuitupTheme.color.primary,
-              width: 1,
+            hintText: hintText,
+            hintStyle: hintTextStyle,
+            fillColor: SuitupTheme.color.contrastLight,
+            filled: true,
+            errorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8),
+              borderSide: BorderSide(
+                color: SuitupTheme.color.border,
+                width: 1,
+              ),
             ),
-          ),
-          errorStyle: SuitupTheme.text.body1.copyWith(
-            color: Colors.red[300],
-            fontSize: 10,
+            focusedErrorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8),
+              borderSide: BorderSide(
+                color: SuitupTheme.color.primary,
+                width: 1,
+              ),
+            ),
+            errorStyle: SuitupTheme.text.body1.copyWith(
+              color: Colors.red[300],
+              fontSize: 10,
+            ),
           ),
         ),
       ),

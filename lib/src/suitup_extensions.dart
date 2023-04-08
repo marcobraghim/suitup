@@ -5,7 +5,8 @@ import 'package:intl/intl.dart';
 
 /// This extension will allow to get the file extension easily
 extension SuitupFileUtils on File {
-  String get ext => path.replaceAll(RegExp(r'\?.+'), '').replaceAll(RegExp(r'.+\.'), '');
+  String get ext =>
+      path.replaceAll(RegExp(r'\?.+'), '').replaceAll(RegExp(r'.+\.'), '');
 }
 
 /// This extension supose to retrieve the global position of a
@@ -17,7 +18,8 @@ extension SuitupGlobalKeyEx on GlobalKey {
     final renderObject = currentContext?.findRenderObject();
     final translation = renderObject?.getTransformTo(null).getTranslation();
     if (translation != null) {
-      return renderObject!.paintBounds.shift(Offset(translation.x, translation.y));
+      return renderObject!.paintBounds
+          .shift(Offset(translation.x, translation.y));
     }
     return null;
   }
@@ -31,7 +33,9 @@ extension SuitupColorUtils on Color {
   /// This method will apply dark or light color for text depending on the
   /// luminance of background color.
   Color get contrast {
-    return computeLuminance() <= .5 ? const Color.fromRGBO(221, 221, 221, 1) : const Color.fromRGBO(51, 51, 51, 1);
+    return computeLuminance() <= .5
+        ? const Color.fromRGBO(221, 221, 221, 1)
+        : const Color.fromRGBO(51, 51, 51, 1);
   }
 }
 

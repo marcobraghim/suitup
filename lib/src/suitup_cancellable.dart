@@ -36,7 +36,9 @@ class SuitupCancellable {
       onCancel: onCancel,
     );
 
-    await completerExecution!.then((value) {}, onError: onError).valueOrCancellation();
+    await completerExecution!
+        .then((value) {}, onError: onError)
+        .valueOrCancellation();
   }
 
   /// This method will mark the previous request to be canceled too

@@ -4,6 +4,7 @@ abstract class SuitupColorAbstract {
   /// COLORS **/
   final Color surface = const Color(0xFF444444);
   final Color surfaceLight = const Color(0xFF666666);
+  final Color surfaceLighter = const Color(0xFFBBBBBB);
   final Color surfaceDark = const Color(0xFF121212);
 
   final Color contrast = const Color(0xFFF9F9F9);
@@ -17,11 +18,7 @@ abstract class SuitupColorAbstract {
   final Color primaryDark = const Color(0xFF0066d4);
   final Color primaryDarker = const Color(0xFF003d80);
 
-  // final Color primaryLighter = const Color(0xFFffbfd4);
-  // final Color primaryLight = const Color(0xFFff407d);
-  // final Color primary = const Color(0xFF960030);
-  // final Color primaryDark = const Color(0xFF800029);
-  // final Color primaryDarker = const Color(0xFF400014);
+  final Color border = const Color(0xFFE0E4F5);
 
   final Color red = const Color(0xFFFF3B3B);
   final Color redLight = const Color(0xFFFF5C5C);

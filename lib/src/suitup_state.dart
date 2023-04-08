@@ -3,7 +3,8 @@ import 'package:get_it/get_it.dart';
 
 import 'suitup_controller.dart';
 
-abstract class SuitupState<C extends SuitupController, T extends StatefulWidget> extends State<T> {
+abstract class SuitupState<C extends SuitupController, T extends StatefulWidget>
+    extends State<T> {
   C? _controller;
 
   SuitupState([SuitupController Function()? newController]) {

@@ -23,3 +23,7 @@
 ## 1.0.6
 
 * Removed dependency on easy loading
+
+## 1.0.7
+
+* Added the `SuitupNotifier` that is meant to be used with `SuitupNotifierBuilder`

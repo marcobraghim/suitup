@@ -20,7 +20,8 @@ void debug(Object? message, {String? label}) {
 }
 
 String dateFormatted(DateTime date, {String? pattern, String? locale}) {
-  var result = DateFormat(pattern ?? 'dd \$1 MMMM \$2 HH:mm', locale ?? 'pt_BR').format(date);
+  var result = DateFormat(pattern ?? 'dd \$1 MMMM \$2 HH:mm', locale ?? 'pt_BR')
+      .format(date);
   if (pattern == null) {
     result = result.replaceFirst('\$1', 'de').replaceFirst('\$2', 'às');
   }
@@ -47,7 +48,9 @@ double doubleInRange(num start, num end) {
 ///
 /// If [echo] is true the result diff will be printed into console.
 Duration executionTime(DateTime start, [bool echo = true]) {
-  final diff = Duration(microseconds: DateTime.now().microsecondsSinceEpoch - start.microsecondsSinceEpoch);
+  final diff = Duration(
+      microseconds:
+          DateTime.now().microsecondsSinceEpoch - start.microsecondsSinceEpoch);
 
   if (echo) developer.log('executionTime: $diff', name: 'mylog');
 
