@@ -25,6 +25,7 @@ extension SuitupGlobalKeyEx on GlobalKey {
   }
 }
 
+/// Some color utils
 extension SuitupColorUtils on Color {
   /// This method will parse this color to a Hexadecimal String representation
   /// like: #005522
@@ -39,6 +40,7 @@ extension SuitupColorUtils on Color {
   }
 }
 
+/// Helpers on strings
 extension SuitupStringUtils on String {
   // This method will parse this string to a Color object
   // Ex.: from #225533 to Color object
@@ -53,6 +55,7 @@ extension SuitupStringUtils on String {
     return Color(int.parse(hexColor, radix: 16));
   }
 
+  /// All chars to lowercase, first uppercase
   String capitalize() {
     if (isEmpty) return this;
     return "${this[0].toUpperCase()}${toLowerCase().substring(1)}";
@@ -68,7 +71,9 @@ extension SuitupStringUtils on String {
   }
 }
 
+/// Utils to doubles
 extension SuitupDoubleUtils on double {
+  /// To show a double value as BRL currency (R$ 10,99)
   String toMoney({String? locale, String? symbol}) => NumberFormat.currency(
         locale: locale ?? 'pt_BR',
         symbol: symbol ?? 'R\$',

@@ -1,5 +1,11 @@
 import 'package:flutter/widgets.dart';
 
+/// There is nothing here because this class is only suposed to
+/// exists so the `SuitupTextAbstract` can be instantiated and
+/// this abstract class allows the user to override its values
+class SuitupColor extends SuitupColorAbstract {}
+
+/// Our default values for colors
 abstract class SuitupColorAbstract {
   /// COLORS **/
   final Color surface = const Color(0xFF444444);

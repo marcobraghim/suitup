@@ -19,6 +19,7 @@ void debug(Object? message, {String? label}) {
   }
 }
 
+/// Format a date as "16 de Junho às 16:20"
 String dateFormatted(DateTime date, {String? pattern, String? locale}) {
   var result = DateFormat(pattern ?? 'dd \$1 MMMM \$2 HH:mm', locale ?? 'pt_BR')
       .format(date);
@@ -28,6 +29,7 @@ String dateFormatted(DateTime date, {String? pattern, String? locale}) {
   return result;
 }
 
+/// Returns a random int number between [start] and [end]
 int randomInt(int start, int end) {
   if (start >= end) {
     throw "[start] number must to be lower than [end]";
@@ -60,6 +62,7 @@ Duration executionTime(DateTime start, [bool echo = true]) {
 /// Returns a representation of current date as Timestamp, but in String
 String get timestamp => DateTime.now().millisecondsSinceEpoch.toString();
 
+/// Remove the focus on the context
 void unfocus(BuildContext context) {
   FocusScopeNode currentFocus = FocusScope.of(context);
   if (!currentFocus.hasPrimaryFocus) currentFocus.unfocus();

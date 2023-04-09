@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
+/// The four status type of the state
 enum SuitupNotifierType {
   initial,
   loading,

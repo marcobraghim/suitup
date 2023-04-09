@@ -39,3 +39,7 @@
 
 ## 1.0.11
 * Docs and removed desktop files
+
+## 1.0.12
+
+* Docs and comments

@@ -3,16 +3,19 @@ import 'package:get_it/get_it.dart';
 
 import 'suitup_controller.dart';
 
+/// A state to automatically run the controller `initialize` and `dispose`
 abstract class SuitupState<C extends SuitupController, T extends StatefulWidget>
     extends State<T> {
   C? _controller;
 
+  /// You can initialize it by yourself
   SuitupState([SuitupController Function()? newController]) {
     if (newController != null) {
       _controller = newController() as C?;
     }
   }
 
+  /// The controller instance pointed by the `SuitupState`
   C get controller {
     assert(_controller != null,
         'The controller `${controller.runtimeType}` need to be initialized or registered on the GetIt');

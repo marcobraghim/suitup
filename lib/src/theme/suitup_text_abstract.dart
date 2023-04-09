@@ -5,6 +5,12 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'suitup_theme.dart';
 
+/// There is nothing here because this class is only suposed to
+/// exists so the `SuitupTextAbstract` can be instantiated and
+/// this abstract class allows the user to override its values
+class SuitupText extends SuitupTextAbstract {}
+
+/// Our default values for text typography
 abstract class SuitupTextAbstract {
   double fontSize(double size) =>
       defaultTargetPlatform == TargetPlatform.android ? size - 2 : size;

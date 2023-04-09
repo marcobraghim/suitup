@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import '../theme/suitup_theme.dart';
 
+/// A simple `TextFormField` but formatted to be prettier to me than material default
 class SuitupTextField extends StatelessWidget {
   final TextEditingController controller;
   final Color? disabledColor;
@@ -25,6 +26,7 @@ class SuitupTextField extends StatelessWidget {
   final int? maxLines;
   final FocusNode? focusNode;
 
+  /// A simple `TextFormField` but formatted to be prettier to me than material default
   const SuitupTextField({
     Key? key,
     required this.controller,
