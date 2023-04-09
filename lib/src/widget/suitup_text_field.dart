@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'suitup_theme.dart';
+import '../theme/suitup_theme.dart';
 
 class SuitupTextField extends StatelessWidget {
   final TextEditingController controller;

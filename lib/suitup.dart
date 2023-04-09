@@ -1,14 +1,21 @@
 library suitup;
 
-export 'src/suitup_cancellable.dart';
-export 'src/suitup_color_abstract.dart';
-export 'src/suitup_controller.dart';
-export 'src/suitup_extensions.dart';
-export 'src/suitup_functions.dart';
-export 'src/suitup_list_notifier.dart';
-export 'src/suitup_notifier.dart';
-export 'src/suitup_observer.dart';
-export 'src/suitup_state.dart';
-export 'src/suitup_status.dart';
-export 'src/suitup_text_field.dart';
-export 'src/suitup_theme.dart';
+/// Helpers
+export 'src/helpers/suitup_cancellable.dart';
+export 'src/helpers/suitup_extensions.dart';
+export 'src/helpers/suitup_functions.dart';
+
+/// State
+export 'src/state/suitup_controller.dart';
+export 'src/state/suitup_state.dart';
+export 'src/state/suitup_status.dart';
+
+/// Theming
+export 'src/theme/suitup_color_abstract.dart';
+export 'src/theme/suitup_theme.dart';
+
+/// Widgets
+export 'src/widget/suitup_list_notifier.dart';
+export 'src/widget/suitup_notifier.dart';
+export 'src/widget/suitup_observer.dart';
+export 'src/widget/suitup_text_field.dart';
