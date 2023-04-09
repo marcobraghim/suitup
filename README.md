@@ -7,13 +7,13 @@ A bunch of features and stuff to help me create awesome apps.
     1. `suitup_functions.dart` with some helper functions
     1. `suitup_extensions.dart` with some extension methods to make our lives easier
 * State
-    1. `SuitupState` to automaticaly inject the `SuitupController` on the page using `GetIt`
+    1. [`SuitupState`](#suitupstate) to automaticaly inject the `SuitupController` on the page using `GetIt`
     1. `SuitupStatus` stands for the useful statuses like `loading`, `idle`, etc...
 * Theme
     1. `SuitupTheme` to make a theme for your layout setting up the colors and typography
 * Widget
-    1. `SuitupObserver` to help the use of ValueNotifier/ChangeNotifier, note that it isn't a state manager, it's a shortcut for `AnimatedWidget`
-    1. `SuitupNotifier` status based to watch some value that is rendered by `SuitupNotifierBuilder`
+    1. [`SuitupObserver`](#suitupobserver) to help the use of ValueNotifier/ChangeNotifier, note that it isn't a state manager, it's a shortcut for `AnimatedWidget`
+    1. [`SuitupNotifier`](#suitupnotifier-with-suitupnotifierbuilder) status based to watch some value that is rendered by `SuitupNotifierBuilder`
     1. `SuitupListNotifier` to make a list observable by `SuitupObserver`
     1. `SuitupTextField` to create text fields with a pre defined style
 
@@ -28,11 +28,11 @@ import 'package:suitup/suitup.dart';
 ## Usage
 
 One example for each functionality on the Suitup. Basically, Suitup is a 
-bunch of helpers to make my life easy.
+bunch of helpers to make my life easier.
 
-### `SuitupObserver` 
+### SuitupObserver
 
-Help the use of `ValueNotifier`/`ChangeNotifier`, note that it isn't a state manager, 
+Help the use of `ValueNotifier` and `ChangeNotifier`, note that it isn't a state manager, 
 it's a shortcut for `AnimatedBuilder`
 
 ```dart
@@ -73,7 +73,7 @@ class _SuitupObsExampleState extends State<SuitupObsExample> {
 }
 ```
 
-### `SuitupNotifier` with `SuitupNotifierBuilder`
+### SuitupNotifier with SuitupNotifierBuilder
 
 Status based `Widget` with `ValueNotifier` or `ChangeNotifier` to control the content
 page workflow.
@@ -116,7 +116,7 @@ class _SuitupObsExampleState extends State<SuitupObsExample> {
 }
 ```
 
-### `SuitupState`
+### SuitupState
 
 When you have a page or screen you may need a controller for it. Suitup have some shortcut for
 some of most common things about it. You create a controller extending the `SuitupController`.
@@ -127,7 +127,7 @@ What is the advantage to use `SuitupState` with the `SuitupController`?
 on the `initState`. Also will automatically trigger the `dispose` of the page and controller when
 the page is closed.
 
-This behavior is inpired by the package `modular` from Flutterando
+This behavior is inspired by the package `modular` from Flutterando
 
 ```dart
 // Don't forget to register the controller with the `get_it` package

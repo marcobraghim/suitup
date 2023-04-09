@@ -36,3 +36,6 @@
 
 ## 1.0.10
 * Documents and examples
+
+## 1.0.11
+* Docs and removed desktop files
