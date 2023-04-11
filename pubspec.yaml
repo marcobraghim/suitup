@@ -10,14 +10,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  async: ^2.11.0
-  intl: ^0.18.0
+  async: ^2.10.0
+  intl: ^0.17.0
   get_it: ^7.2.0
   google_fonts: ^4.0.3
 
 dev_dependencies:
-  # flutter_test:
-  #   sdk: flutter
+  flutter_test:
+    sdk: flutter
   flutter_lints: ^2.0.0
 
 # For information on the generic Dart part of this file, see the
