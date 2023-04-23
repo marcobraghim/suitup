@@ -61,6 +61,8 @@ class SuitupListNotifier<T> extends ChangeNotifier {
     return result;
   }
 
+  T elementAt(int index) => _list.elementAt(index);
+
   /// Remove an item on the [index] from the list and notify rebuild `SuitupObserver`
   T removeAt(int index) {
     final result = _list.removeAt(index);
