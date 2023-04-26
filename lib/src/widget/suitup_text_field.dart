@@ -49,10 +49,8 @@ class SuitupTextField extends StatelessWidget {
     this.maxLength,
     this.maxLines = 1,
     this.focusNode,
-  })  : assert(leftIcon == null || leftWidget == null,
-            "Can't have left Icon and left Widget at the same time"),
-        assert(rightIcon == null || rightWidget == null,
-            "Can't have right Icon and right Widget at the same time"),
+  })  : assert(leftIcon == null || leftWidget == null, "Can't have left Icon and left Widget at the same time"),
+        assert(rightIcon == null || rightWidget == null, "Can't have right Icon and right Widget at the same time"),
         super(key: key);
 
   @override
@@ -79,8 +77,7 @@ class SuitupTextField extends StatelessWidget {
           // minLines: null,
           maxLength: maxLength,
           decoration: InputDecoration(
-            contentPadding:
-                const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+            contentPadding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
             // labelStyle: SuitupTheme.text.body1,
             prefixIcon: leftIcon != null
                 ? Row(
@@ -89,9 +86,7 @@ class SuitupTextField extends StatelessWidget {
                       Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 16),
                           child: Icon(leftIcon!,
-                              color: enabled
-                                  ? SuitupTheme.color.primaryLight
-                                  : SuitupTheme.color.contrast)),
+                              color: enabled ? SuitupTheme.color.primaryLight : SuitupTheme.color.contrast)),
                       Container(
                         width: 1,
                         height: 18,
@@ -104,8 +99,7 @@ class SuitupTextField extends StatelessWidget {
             suffixIcon: rightIcon != null
                 ? Padding(
                     padding: const EdgeInsets.only(right: 16),
-                    child: Icon(rightIcon!,
-                        color: SuitupTheme.color.contrast, size: 18))
+                    child: Icon(rightIcon!, color: SuitupTheme.color.contrast, size: 18))
                 : rightWidget,
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
