@@ -1,3 +1,7 @@
+## 1.0.14
+
+* `SuitupController` status shortcuts
+
 ## 1.0.13
 
 * elementAt on the `SuitupListNotifier`

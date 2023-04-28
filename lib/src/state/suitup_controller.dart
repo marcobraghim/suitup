@@ -10,6 +10,16 @@ abstract class SuitupController {
   /// Change the value of the status
   void setStatus(SuitupStatus val) => status.value = val;
 
+  bool get isIdle => status.value.isIdle;
+  bool get isInitial => status.value.isInitial;
+  bool get isLoading => status.value.isLoading;
+  bool get isLoadingMore => status.value.isLoadingMore;
+  bool get isSuccess => status.value.isSuccess;
+  bool get isFailure => status.value.isFailure;
+  bool get isFinished => status.value.isFinished;
+  bool get isDeleting => status.value.isDeleting;
+  bool get isEmpty => status.value.isEmpty;
+
   /// Implement your initialization stuff, it will run automatically
   Future<void> initialize() async {}
 
