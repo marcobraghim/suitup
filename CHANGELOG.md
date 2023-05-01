@@ -1,3 +1,7 @@
+## 1.0.15
+
+* `TextCapitalization` parameter on `SuitupTextField`
+
 ## 1.0.14
 
 * `SuitupController` status shortcuts
