@@ -1,3 +1,6 @@
+## 1.1.0-pre
+* Flutter 3.10.0 compatibility
+
 ## 1.0.15
 
 * `TextCapitalization` parameter on `SuitupTextField`
