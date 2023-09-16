@@ -20,8 +20,8 @@ abstract class SuitupColorAbstract {
 
   final Color primaryLighter = const Color(0xFF80bcff);
   final Color primaryLight = const Color(0xFF2a90ff);
-  final Color primary = const Color(0xFF007bff);
-  final Color primaryDark = const Color(0xFF0066d4);
+  final Color primary = const Color(0xFF1C64F2);
+  final Color primaryDark = const Color(0XFF0a3fa9);
   final Color primaryDarker = const Color(0xFF003d80);
 
   final Color border = const Color(0xFFE0E4F5);

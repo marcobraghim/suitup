@@ -1,3 +1,7 @@
+## 1.2.0
+* Flutter 3.10.0 compatibility
+* Update primary color
+
 ## 1.1.0-pre
 * Flutter 3.10.0 compatibility
 
