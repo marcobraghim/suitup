@@ -15,9 +15,9 @@ abstract class SuitupTextAbstract {
   double fontSize(double size) =>
       defaultTargetPlatform == TargetPlatform.android ? size - 2 : size;
 
-  TextStyle get logoFont => GoogleFonts.courgette(
+  TextStyle get logoFont => GoogleFonts.roboto(
       fontSize: fontSize(26), color: SuitupTheme.color.surface);
-  TextStyle get _base => GoogleFonts.rubik(
+  TextStyle get _base => GoogleFonts.roboto(
       fontSize: fontSize(12), color: SuitupTheme.color.surface);
 
   TextStyle get headline1 =>

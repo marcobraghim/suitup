@@ -1,3 +1,6 @@
+## 1.2.1
+* New extensions for double and default font now is Roboto
+
 ## 1.2.0
 * Flutter 3.10.0 compatibility
 * Update primary color

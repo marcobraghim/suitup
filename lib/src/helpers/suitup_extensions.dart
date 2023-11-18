@@ -78,4 +78,10 @@ extension SuitupDoubleUtils on double {
         locale: locale ?? 'pt_BR',
         symbol: symbol ?? 'R\$',
       ).format(this);
+
+  double get toPrecision => this > 0 ? double.parse(toStringAsFixed(2)) : this;
+
+  String get percent {
+    return '${toPrecision.toString().replaceFirst('.', ',')}%';
+  }
 }
