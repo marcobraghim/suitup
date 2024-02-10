@@ -17,6 +17,8 @@ abstract class SuitupController {
   bool get isSuccess => status.value.isSuccess;
   bool get isFailure => status.value.isFailure;
   bool get isFinished => status.value.isFinished;
+  bool get isSaving => status.value.isSaving;
+  bool get isUpdating => status.value.isUpdating;
   bool get isDeleting => status.value.isDeleting;
   bool get isEmpty => status.value.isEmpty;
 

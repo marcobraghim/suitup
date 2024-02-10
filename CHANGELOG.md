@@ -1,3 +1,6 @@
+## 1.2.3
+* Bugfix: New statuses `saving` and `updating`
+
 ## 1.2.2
 * New statuses `saving` and `updating`
 
