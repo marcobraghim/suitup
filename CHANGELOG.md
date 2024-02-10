@@ -1,3 +1,6 @@
+## 1.2.2
+* New statuses `saving` and `updating`
+
 ## 1.2.1
 * New extensions for double and default font now is Roboto
 

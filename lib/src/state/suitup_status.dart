@@ -8,6 +8,8 @@ enum SuitupStatus {
   success,
   failure,
   finished,
+  saving,
+  updating,
   deleting,
   empty;
 
@@ -34,6 +36,12 @@ enum SuitupStatus {
 
   /// True when the current instance is `finished`
   bool get isFinished => isEqual(SuitupStatus.finished);
+
+  /// True when the current instance is `saving`
+  bool get isSaving => isEqual(SuitupStatus.saving);
+
+  /// True when the current instance is `updating`
+  bool get isUpdating => isEqual(SuitupStatus.updating);
 
   /// True when the current instance is `deleting`
   bool get isDeleting => isEqual(SuitupStatus.deleting);
